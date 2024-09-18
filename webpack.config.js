@@ -1,35 +1,35 @@
 import path from 'path';
 
-export const webpackConfig = (isMinify) => {
+export const webpackConfig = (isMode) => {
   const paths = {
     src: path.resolve('src'),
     build: path.resolve('dist'),
   };
 
-  const optimization = isMinify
-      ? { minimize: true }
-      : { minimize: false };
-
   return {
     entry: path.join(paths.src, 'js/app.js'),
-    mode: isMinify ? 'development' : 'production',
+
+    mode: isMode ? 'development' : 'production',
+
     output: {
       path: path.join(paths.build, 'js'),
-      filename: isMinify ? 'app.min.js' : 'app.js',
+      filename: 'app.min.js',
       publicPath: '/',
     },
-    optimization: optimization,
+
     module: {
       rules: [
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
+
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
             },
           },
+
           resolve: {
             fullySpecified: false,
           },

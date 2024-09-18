@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
+import {EffectFade, Navigation} from "swiper/modules";
 
 /* support webp */
 import BaseHelpers from "./helpers/BaseHelpers.js";
-import {EffectFade, Navigation} from "swiper/modules";
 
 BaseHelpers.checkWebpSupport();
 

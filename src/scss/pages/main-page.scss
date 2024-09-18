@@ -1,555 +1,585 @@
 .app {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 
-  background: url("../images/bg.png") no-repeat;
-  background-size: cover !important;
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover !important;
 
-  &[data-step="1"] {
-    background: url("../images/step-1-girl-1.png") no-repeat left 70px bottom,
-    url("../images/step-1-girl-2.png") no-repeat right 22px bottom,
-    url("../images/bg.png") no-repeat;
-    background-size: 521px 795px, 671px 732px, cover !important;
+    &[data-step="1"] {
+        background: url("../images/step-1-girl-1.png") no-repeat left 70px bottom,
+        url("../images/step-1-girl-2.png") no-repeat right 22px bottom,
+        url("../images/bg.png") no-repeat;
+        background-size: 521px 795px, 671px 732px, cover !important;
 
-    .container {
-      width: 1130px;
+        .app__content-step-1 {
+            opacity: 1;
+            visibility: visible;
+            height: 100vh;
+            padding: 35px 0;
+        }
     }
 
     .app__content-step-1 {
-      opacity: 1;
-      visibility: visible;
-      height: 100vh;
-      padding: 35px 0;
+        .app__title {
+            font-size: 84px;
+            line-height: 101px;
+            text-shadow: 0 4px 20px rgba(255, 213, 54, .2);
+        }
+
+        .app__text {
+            min-height: 93px;
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+            font-size: 28px;
+            line-height: 39.2px;
+            font-weight: bold;
+            letter-spacing: 5.6px;
+            text-transform: uppercase;
+            color: #FFF2CE;
+        }
     }
 
-    .app__title {
-      font-size: 84px;
-      line-height: 101px;
-      text-shadow: 0 4px 20px rgba(255, 213, 54, .2);
-    }
+    &[data-step="2"] {
+        .app__content-step-2 {
+            opacity: 1;
+            visibility: visible;
+            height: 100vh;
+            padding: 35px 0;
 
-    .app__text {
-      min-height: 93px;
-      display: flex;
-      align-items: center;
-      margin-top: 40px;
-      font-size: 28px;
-      line-height: 39.2px;
-      font-weight: bold;
-      letter-spacing: 5.6px;
-      text-transform: uppercase;
-      color: #FFF2CE;
-    }
-
-  }
-
-  &[data-step="2"] {
-    .container {
-      width: 1340px;
+            align-items: flex-start;
+        }
     }
 
     .app__content-step-2 {
-      opacity: 1;
-      visibility: visible;
-      height: 100vh;
-      padding: 35px 0;
+        .app__title {
+            font-size: 64px;
+            line-height: 77px;
+            background: linear-gradient(175deg, #eb5d38 20%, #ffd600);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
 
-      justify-content: flex-start;
+        .btn {
+            width: 463px;
+            margin-top: 57px;
+        }
     }
 
-    .app__title {
-      font-size: 64px;
-      line-height: 77px;
-      background: linear-gradient(175deg, #eb5d38 20%, #ffd600);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+    &[data-step="3"] {
+        background: url("../images/step-3-girl-1.png") no-repeat left 39px bottom,
+        url("../images/step-3-girl-2.png") no-repeat right 27px bottom,
+        url("../images/bg.png") no-repeat;
+        background-size: 523px 812px, 567px 812px, cover !important;
 
-    .btn {
-      width: 463px;
-      margin-top: 57px;
-    }
-  }
-
-  &[data-step="3"] {
-    background: url("../images/step-3-girl-1.png") no-repeat left 39px bottom,
-    url("../images/step-3-girl-2.png") no-repeat right 27px bottom,
-    url("../images/bg.png") no-repeat;
-    background-size: 523px 812px, 567px 812px, cover !important;
-
-    .container {
-      width: 815px;
+        .app__content-step-3 {
+            opacity: 1;
+            visibility: visible;
+            height: 100vh;
+            padding: 35px 0;
+        }
     }
 
     .app__content-step-3 {
-      opacity: 1;
-      visibility: visible;
-      height: 100vh;
-      padding: 35px 0;
-    }
-
-    .app__title {
-      font-size: 120px;
-      line-height: 1;
-      background: linear-gradient(167deg, #eb5d38 30%, #ffd600);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .app__text {
-      margin-top: 40px;
-      font-size: 32px;
-      line-height: 45px;
-    }
-
-    .btn {
-      margin-top: 120px;
-    }
-  }
-
-  &__volume {
-    position: absolute;
-    top: 48px;
-    right: 74px;
-
-    &.active {
-      .on {
-        display: block;
-      }
-
-      .off {
-        display: none;
-      }
-    }
-
-    .on {
-      display: none;
-    }
-
-    &:hover {
-      opacity: .85;
-    }
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    transition: all .4s;
-  }
-
-  &__subtitle {
-    margin-bottom: 20px;
-    padding: 15px 29px;
-    font-size: 36px;
-    line-height: 1;
-    background: rgba(255, 255, 255, .2);
-    backdrop-filter: blur(6px);
-    border: 1px solid $white;
-    border-radius: 40px;
-  }
-
-  &__title {
-    font-weight: bold;
-    text-transform: uppercase;
-
-    background: linear-gradient(148deg, #EB5D38 30%, #FFD600);
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 2px $white;
-  }
-
-  &__buttons {
-    display: flex;
-    gap: 50px;
-    margin-top: 80px;
-  }
-
-  &__slider {
-    width: 463px;
-
-    &-wrap {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 45px;
-      padding: 0 40px;
-    }
-
-    &-item {
-      padding: 42px 71px 40px;
-
-      background: rgba(255, 255, 255, .2);
-      backdrop-filter: blur(6px);
-
-      border: 1px solid $white;
-      border-radius: 20px;
-      img {
-        border-radius: 20px;
-      }
-    }
-
-    &-title {
-      margin-top: 30px;
-      font-size: 32px;
-      line-height: 38px;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
-    }
-
-    &-arrow {
-      position: relative;
-      width: 88px;
-      height: 88px;
-      margin-top: 54px;
-      background: linear-gradient(103.39deg, #FFE53B -32.17%, #FF2525 114.07%);
-      border-radius: 50%;
-      cursor: pointer;
-      transition: box-shadow .3s;
-
-      &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        pointer-events: none;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        transition: box-shadow .3s;
-      }
-
-      &:hover {
-        box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, 0.25) inset, 4px -4px 8px 0px rgba(0, 0, 0, 0.25) inset;
-
-        &:before {
-          box-shadow: none;
+        .app__title {
+            font-size: 120px;
+            line-height: 1;
+            background: linear-gradient(167deg, #eb5d38 30%, #ffd600);
+            -webkit-background-clip: text;
+            color: transparent;
         }
-      }
 
-      &-prev svg {
-        right: -46px;
-      }
-
-      &-next {
-        background: linear-gradient(288deg, #FFE53B -32.17%, #FF2525 114.07%);
-
-        svg {
-          left: -46px;
+        .app__text {
+            margin-top: 40px;
+            font-size: 32px;
+            line-height: 45px;
         }
-      }
 
-      svg {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-  }
-
-  @media (max-width: 1800px) {
-    &[data-step="1"] {
-      background: url("../images/step-1-girl-1.png") no-repeat left -100px bottom,
-                  url("../images/step-1-girl-2.png") no-repeat right -60px bottom,
-                  url("../images/bg.png") no-repeat;
-      background-size: 521px 795px, 671px 732px, cover !important;
-    }
-  }
-
-  @media (max-width: 1599px) {
-    &[data-step="3"] {
-      background: url("../images/step-3-girl-1.png") no-repeat left -200px bottom,
-                  url("../images/step-3-girl-2.png") no-repeat right -200px bottom,
-                  url("../images/bg.png") no-repeat;
-    }
-  }
-
-  @media (max-width: 1439px) {
-    &[data-step="1"] {
-      background: url("../images/step-1-girl-1.png") no-repeat left -100px bottom -90px,
-      url("../images/step-1-girl-2.png") no-repeat right -60px bottom -20px,
-      url("../images/bg.png") no-repeat;
-      background-size: 521px 795px, 671px 732px, cover !important;
-    }
-    &[data-step="2"] {
-      .app__title {
-        width: 924px;
-        max-width: 100%;
-        font-size: 45px;
-        line-height: 58px;
-      }
-    }
-
-    &[data-step="3"] {
-      background: url("../images/step-3-girl-1.png") no-repeat left -200px bottom,
-                  url("../images/step-3-girl-2.png") no-repeat right -200px bottom,
-                  url("../images/bg.png") no-repeat;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 1199px) {
-    &[data-step="1"] {
-      background: url('../images/step-1-girl-1.png') no-repeat left -148px bottom -90px,
-      url('../images/step-1-girl-2.png') no-repeat right -80px bottom,
-      url('../images/bg.png') no-repeat;
-      background-size: 521px auto, 651px auto, cover !important;
-    }
-    &[data-step="2"] {
-      .app__content-step-2 {
-        padding: 95px 0;
-      }
-    }
-    .app__volume {
-      top: 30px;
-      right: 40px;
-    }
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
-    &[data-step="1"] {
-      .container {
-        width: 992px;
-      }
-
-      .app__title {
-        font-size: 72px;
-        line-height: 89px;
-      }
-
-      .app__text {
-        font-size: 25px;
-        line-height: 36px;
-        letter-spacing: 4px;
-      }
-    }
-    &__subtitle {
-      font-size: 31px;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 991px) {
-    &[data-step="1"] {
-      .container {
-        width: 768px;
-      }
-
-      .app__title {
-        font-size: 55px;
-        line-height: 72px;
-      }
-
-      .app__text {
-        min-height: 72px;
-        margin-top: 30px;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: 3px;
-      }
-    }
-    &__subtitle {
-      padding: 10px 15px;
-      font-size: 24px;
-    }
-    &__buttons {
-      gap: 30px;
-    }
-    &__slider {
-      width: 420px;
-      &-wrap {
-        padding: 0;
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    &__slider-arrow-icon-mobile {
-      display: none;
-    }
-  }
-
-  @media (max-width: 767px) {
-    background: url("../images/bg-mobile.png") no-repeat;
-    &[data-step="1"] {
-      background: url("../images/step-1-girl-1-mobile.png") no-repeat center bottom,
-      url("../images/bg-mobile.png") no-repeat;
-      background-size: 244px 361px, cover !important;
-
-      .app__content-step-1 {
-        padding: 20px 0 16px;
-      }
-
-      .app__title {
-        font-size: 24px;
-        line-height: 29px;
-      }
-
-      .app__text {
-        min-height: 47px;
-        margin-top: 10px;
-        font-size: 12px;
-        line-height: 14.4px;
-        letter-spacing: 2.4px;
-      }
-    }
-    &[data-step="2"] {
-      .app__content-step-2 {
-        padding: 20px 0 16px;
-      }
-
-      .app__title {
-        width: 308px;
-        max-width: 100%;
-        font-size: 24px;
-        line-height: 29px;
-        background: linear-gradient(173deg, #eb5d38 35%, #ffd600);
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-      .btn {
-        margin-top: 20px;
-        border-radius: 5px;
-        &:before {
-          border-radius: 5px;
+        .btn {
+            margin-top: 120px;
         }
-      }
-    }
-    &[data-step="3"] {
-      background: url("../images/step-3-girl-1-mobile.png") no-repeat center bottom,
-                  url("../images/bg-mobile.png") no-repeat;
-      background-size: 279px auto, cover !important;
-      .app__volume {
-        top: 28px;
-      }
-      .app__content-step-3 {
-        justify-content: flex-start;
-        padding: 20px 0 28px;
-      }
-      .app__title {
-        min-height: 45px;
-        font-size: 48px;
-        line-height: 44px;
-      }
-      .app__text {
-        width: 308px;
-        max-width: 100%;
-        margin: 10px auto 0;
-        font-size: 18px;
-        line-height: 24px;
-      }
-      .btn {
-        margin-top: auto;
-      }
     }
 
     &__volume {
-      top: 25px;
-      right: 11px;
+        position: absolute;
+        top: 48px;
+        right: 74px;
 
-      svg {
-        width: 30px;
-        height: 30px;
-      }
+        &.active {
+            .on {
+                display: block;
+            }
+
+            .off {
+                display: none;
+            }
+        }
+
+        .on {
+            display: none;
+        }
+
+        &:hover {
+            opacity: .85;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        transition: all .8s, visibility 0s;
     }
 
     &__subtitle {
-      width: 258px;
-      margin-bottom: 10px;
-      padding: 5px;
-
-      font-size: 16px;
-      line-height: 19.2px;
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 15px 29px;
+        font-size: 36px;
+        line-height: 1;
+        background: rgba(255, 255, 255, .2);
+        backdrop-filter: blur(6px);
+        border: 1px solid $white;
+        border-radius: 40px;
     }
 
     &__title {
-      -webkit-text-stroke: .5px #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        background: linear-gradient(148deg, #EB5D38 30%, #FFD600);
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-stroke: 2px $white;
     }
 
     &__buttons {
-      width: 100%;
-      flex-grow: 1;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 30px;
-
-      .btn-fill {
-        order: -1;
-      }
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 80px;
     }
 
     &__slider {
-      width: calc(100% - 105px);
-      &-wrap {
-        margin-top: 20px;
-        padding: 0;
-      }
+        width: 463px;
 
-      &-item {
-        padding: 21px 26px 22px;
-      }
-      &-title {
-        margin-top: 10px;
-        margin-left: -26px;
-        margin-right: -26px;
-        padding: 0 12px;
-        font-size: 20px;
-        line-height: 24px;
-      }
-
-      &-arrow {
-        width: 45px;
-        height: 45px;
-        margin-top: 8px;
-        &-prev {
-          margin-left: -4px;
-          svg {
-            right: -6px;
-          }
+        &-wrap {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 45px;
+            padding: 0 40px;
         }
-        &-next {
-          margin-right: -4px;
-          svg {
-            left: -6px;
-          }
+
+        &-item {
+            padding: 42px 71px 40px;
+
+            background: rgba(255, 255, 255, .2);
+            backdrop-filter: blur(6px);
+
+            border: 1px solid $white;
+            border-radius: 20px;
+
+            img {
+                border-radius: 20px;
+            }
         }
-      }
 
-      &-arrow-icon-desktop {
-        display: none;
-      }
-    }
-  }
+        &-title {
+            margin-top: 30px;
+            font-size: 32px;
+            line-height: 38px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+        }
 
-  @media (min-width: 360px) and (max-width: 767px) {
-    &__content {
-      width: 330px;
-      margin: 0 auto;
+        &-arrow {
+            position: relative;
+            width: 88px;
+            height: 88px;
+            margin-top: 54px;
+            background: linear-gradient(103.39deg, #FFE53B -32.17%, #FF2525 114.07%);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: box-shadow .3s;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                pointer-events: none;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+                transition: box-shadow .3s;
+            }
+
+            &:hover {
+                box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, 0.25) inset, 4px -4px 8px 0px rgba(0, 0, 0, 0.25) inset;
+
+                &:before {
+                    box-shadow: none;
+                }
+            }
+
+            &-prev svg {
+                right: -46px;
+            }
+
+            &-next {
+                background: linear-gradient(288deg, #FFE53B -32.17%, #FF2525 114.07%);
+
+                svg {
+                    left: -46px;
+                }
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
     }
-  }
-  @media (max-width: 359px) {
-    &[data-step="2"] {
-      .app__volume {
-        top: 15px;
-      }
+
+    @media (max-width: 1800px) {
+        &[data-step="1"] {
+            background: url("../images/step-1-girl-1.png") no-repeat left -100px bottom,
+            url("../images/step-1-girl-2.png") no-repeat right -60px bottom,
+            url("../images/bg.png") no-repeat;
+            background-size: 521px 795px, 671px 732px, cover !important;
+        }
     }
-    &[data-step="3"] {
-      .app__title {
-        font-size: 43px;
-      }
+
+    @media (max-width: 1599px) {
+        &[data-step="3"] {
+            background: url("../images/step-3-girl-1.png") no-repeat left -200px bottom,
+            url("../images/step-3-girl-2.png") no-repeat right -200px bottom,
+            url("../images/bg.png") no-repeat;
+        }
     }
-    &__subtitle {
-      width: 216px;
+
+    @media (max-width: 1439px) {
+        &[data-step="1"] {
+            background: url("../images/step-1-girl-1.png") no-repeat left -100px bottom -90px,
+            url("../images/step-1-girl-2.png") no-repeat right -60px bottom -20px,
+            url("../images/bg.png") no-repeat;
+            background-size: 521px 795px, 671px 732px, cover !important;
+        }
+
+        .app__content-step-2 .app__title {
+            width: 924px;
+            margin: 0 auto;
+            max-width: 100%;
+            font-size: 45px;
+            line-height: 58px;
+        }
+
+        &[data-step="3"] {
+            background: url("../images/step-3-girl-1.png") no-repeat left -200px bottom,
+            url("../images/step-3-girl-2.png") no-repeat right -200px bottom,
+            url("../images/bg.png") no-repeat;
+        }
     }
-  }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        &[data-step="1"] {
+            background: url('../images/step-1-girl-1.png') no-repeat left -148px bottom -90px,
+            url('../images/step-1-girl-2.png') no-repeat right -80px bottom,
+            url('../images/bg.png') no-repeat;
+            background-size: 521px auto, 651px auto, cover !important;
+        }
+        &[data-step="2"] {
+            .app__content-step-2 {
+                padding: 95px 0;
+            }
+        }
+        .app__volume {
+            top: 30px;
+            right: 40px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .app__content-step-1 {
+            .container {
+                width: 992px;
+            }
+
+            .app__title {
+                font-size: 72px;
+                line-height: 89px;
+            }
+
+            .app__text {
+                font-size: 25px;
+                line-height: 36px;
+                letter-spacing: 4px;
+            }
+        }
+        &__subtitle {
+            font-size: 31px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .app__content-step-1 {
+            .container {
+                width: 768px;
+            }
+
+            .app__title {
+                font-size: 55px;
+                line-height: 72px;
+            }
+
+            .app__text {
+                min-height: 72px;
+                margin-top: 30px;
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: 3px;
+            }
+        }
+        &__subtitle {
+            padding: 10px 15px;
+            font-size: 24px;
+        }
+        &__buttons {
+            gap: 30px;
+        }
+        &__slider {
+            width: 420px;
+
+            &-wrap {
+                padding: 0;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .app__content-step-1 .container {
+            width: 1130px;
+        }
+        .app__content-step-2 .container {
+            width: 1340px;
+        }
+        .app__content-step-3 .container {
+            width: 815px;
+        }
+
+        &__slider-arrow-icon-mobile {
+            display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        background: url("../images/bg-mobile.png") no-repeat;
+        &[data-step="1"] {
+            background: url("../images/step-1-girl-1-mobile.png") no-repeat center bottom,
+            url("../images/bg-mobile.png") no-repeat;
+            background-size: 244px 361px, cover !important;
+
+            .app__content-step-1 {
+                padding: 20px 0 16px;
+            }
+        }
+        .app__content-step-1 {
+            .app__title {
+                font-size: 24px;
+                line-height: 29px;
+            }
+
+            .app__text {
+                min-height: 47px;
+                margin-top: 10px;
+                font-size: 12px;
+                line-height: 14.4px;
+                letter-spacing: 2.4px;
+            }
+        }
+        &[data-step="2"] {
+            .app__content-step-2 {
+                padding: 20px 0 16px;
+            }
+        }
+        .app__content-step-2 {
+            .app__title {
+                width: 308px;
+                max-width: 100%;
+                font-size: 24px;
+                line-height: 29px;
+                background: linear-gradient(173deg, #eb5d38 35%, #ffd600);
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
+            .btn {
+                margin-top: 20px;
+                border-radius: 5px;
+
+                &:before {
+                    border-radius: 5px;
+                }
+            }
+        }
+        &[data-step="3"] {
+            background: url("../images/step-3-girl-1-mobile.png") no-repeat center bottom,
+            url("../images/bg-mobile.png") no-repeat;
+            background-size: 279px auto, cover !important;
+
+            .app__volume {
+                top: 28px;
+            }
+
+            .app__content-step-3 {
+                padding: 20px 0 28px;
+            }
+        }
+
+        .app__content-step-3 {
+            .app__title {
+                min-height: 45px;
+                font-size: 48px;
+                line-height: 44px;
+            }
+
+            .app__text {
+                width: 308px;
+                max-width: 100%;
+                margin: 10px auto 0;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .btn {
+                margin-top: auto;
+            }
+        }
+
+        &__volume {
+            top: 25px;
+            right: 11px;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .app__content {
+            display: block;
+            .container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &__subtitle {
+            width: 258px;
+            margin-bottom: 10px;
+            padding: 5px;
+
+            font-size: 16px;
+            line-height: 19.2px;
+        }
+
+        &__title {
+            -webkit-text-stroke: .5px #fff;
+        }
+
+        &__buttons {
+            width: 100%;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 30px;
+
+            .btn-fill {
+                order: -1;
+            }
+        }
+
+        &__slider {
+            width: calc(100% - 105px);
+
+            &-wrap {
+                margin-top: 20px;
+                padding: 0;
+            }
+
+            &-item {
+                padding: 21px 26px 22px;
+            }
+
+            &-title {
+                margin-top: 10px;
+                margin-left: -26px;
+                margin-right: -26px;
+                padding: 0 12px;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            &-arrow {
+                width: 45px;
+                height: 45px;
+                margin-top: 8px;
+
+                &-prev {
+                    margin-left: -4px;
+
+                    svg {
+                        right: -6px;
+                    }
+                }
+
+                &-next {
+                    margin-right: -4px;
+
+                    svg {
+                        left: -6px;
+                    }
+                }
+            }
+
+            &-arrow-icon-desktop {
+                display: none;
+            }
+        }
+    }
+
+    @media (min-width: 360px) and (max-width: 767px) {
+        &__content .container {
+            width: 360px;
+        }
+    }
+    @media (max-width: 359px) {
+        &[data-step="2"] {
+            .app__volume {
+                top: 15px;
+            }
+        }
+        .app__content-step-3 {
+            .app__title {
+                font-size: 43px;
+            }
+        }
+        &__subtitle {
+            width: 216px;
+        }
+    }
 }

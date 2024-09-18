@@ -1,23 +1,23 @@
 <div id="app" class="app" data-step="1">
 
     <audio id="background-music" loop>
-        <source src="/static/smack-my-bitch-up.mp3" type="audio/mpeg">
+        <source src="static/smack-my-bitch-up.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
     <button id="volume" class="app__volume">
         <svg width="52" height="52" class="off">
-            <use href="/images/icons/icons.svg#volume-off"></use>
+            <use href="images/icons/icons.svg#volume-off"></use>
         </svg>
 
         <svg width="52" height="52" class="on">
-            <use href="/images/icons/icons.svg#volume-on"></use>
+            <use href="images/icons/icons.svg#volume-on"></use>
         </svg>
     </button>
 
-    <div class="container">
 
-        <div class="app__content app__content-step-1">
+    <div class="app__content app__content-step-1">
+        <div class="container">
             <div class="app__subtitle">Stop spending time on mediocre online stuff!</div>
 
             <h1 class="app__title">Explore our intriguing 3D game</h1>
@@ -25,39 +25,41 @@
             <div class="app__text">instead and experience unparalleled pleasure like you've never seen before.</div>
 
             <div class="app__buttons">
-                <button class="btn btn-transparent">No,thanks</button>
+                <button class="btn btn-transparent" data-next-step="3">No,thanks</button>
                 <button class="btn btn-fill" data-next-step="2">Continue</button>
             </div>
         </div>
+    </div>
 
-        <div class="app__content app__content-step-2">
+    <div class="app__content app__content-step-2">
+        <div class="container">
             <div class="app__title">Who Would You Choose as Your First Partner, if you play right now?</div>
 
             <div class="app__slider-wrap">
 
                 <div class="app__slider-arrow app__slider-arrow-prev">
                     <svg class="app__slider-arrow-icon-desktop" width="94" height="24">
-                        <use href="/images/icons/icons.svg#arrow-left"></use>
+                        <use href="images/icons/icons.svg#arrow-left"></use>
                     </svg>
                     <svg class="app__slider-arrow-icon-mobile" width="36" height="24">
-                        <use href="/images/icons/icons.svg#arrow-left-mobile"></use>
+                        <use href="images/icons/icons.svg#arrow-left-mobile"></use>
                     </svg>
                 </div>
 
                 <div class="app__slider app__slider-js">
                     <div class="swiper-wrapper">
                         <div class="app__slider-item swiper-slide">
-                            <img src="/images/slider-1.png" alt="">
-
-                            <div class="app__slider-title">Your Neighbor</div>
-                        </div>
-                        <div class="app__slider-item swiper-slide">
-                            <img src="/images/slider-2.png" alt="">
+                            <img src="images/slider-1.png" alt="">
 
                             <div class="app__slider-title">Step-Sister</div>
                         </div>
                         <div class="app__slider-item swiper-slide">
-                            <img src="/images/slider-3.png" alt="">
+                            <img src="images/slider-2.png" alt="">
+
+                            <div class="app__slider-title">Your Neighbor</div>
+                        </div>
+                        <div class="app__slider-item swiper-slide">
+                            <img src="images/slider-3.png" alt="">
 
                             <div class="app__slider-title">Famous Celebrity</div>
                         </div>
@@ -66,10 +68,10 @@
 
                 <div class="app__slider-arrow app__slider-arrow-next">
                     <svg class="app__slider-arrow-icon-desktop" width="94" height="24">
-                        <use href="/images/icons/icons.svg#arrow-right"></use>
+                        <use href="images/icons/icons.svg#arrow-right"></use>
                     </svg>
                     <svg class="app__slider-arrow-icon-mobile" width="36" height="24">
-                        <use href="/images/icons/icons.svg#arrow-right-mobile"></use>
+                        <use href="images/icons/icons.svg#arrow-right-mobile"></use>
                     </svg>
                 </div>
 
@@ -77,11 +79,15 @@
 
             <button class="btn btn-fill btn-big" data-next-step="3">Next</button>
         </div>
+    </div>
 
-        <div class="app__content app__content-step-3">
+    <div class="app__content app__content-step-3">
+        <div class="container">
             <h1 class="app__title">Warning</h1>
 
-            <div class="app__text">You must be at least 18 years old and comfortable with mature topics to play the game.</div>
+            <div class="app__text">You must be at least 18 years old and comfortable with mature topics to play the
+                game.
+            </div>
 
             <button class="btn btn-fill btn-big" data-next-step="1">Ok, Continue</button>
         </div>
