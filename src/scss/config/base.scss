@@ -1,0 +1,37 @@
+/** Базовые анимации: */
+@import 'keyframes';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.page {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (min-width: $tv) {
+    .hide-tablet {
+        display: none;
+    }
+}
+@media (max-width: $mobile) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: $device) {
+    .hide-device {
+        display: none;
+    }
+}

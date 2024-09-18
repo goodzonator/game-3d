@@ -1,0 +1,23 @@
+/* ТИПОГРАФИЯ */
+
+.h1, .h2 {
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.h1 {
+    font-size: 34px;
+    line-height: 39px;
+    color: $white;
+}
+
+.h2 {
+    font-size: 24px;
+    line-height: 27.58px;
+}
+
+.h3 {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 500;
+}
